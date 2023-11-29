@@ -4,6 +4,7 @@
     "angular.ng-template",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
