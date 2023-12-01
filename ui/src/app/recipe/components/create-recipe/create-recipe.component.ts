@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { CreateOrUpdateRecipe } from '../../models/create-or-update-recipe.model';
 import { RecipeService } from '../../services/recipe.service';
 import { Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-create-recipe',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButtonModule],
   templateUrl: './create-recipe.component.html',
   styleUrl: './create-recipe.component.css'
 })
