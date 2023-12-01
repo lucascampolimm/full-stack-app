@@ -10,19 +10,22 @@ export class RecipeService {
   constructor(private http: HttpClient) {}
 
   get() {
-    return this.http.get<Recipe[]>('http://localhost:3000/recipes');
+    return this.http.get<Recipe[]>(`http://localhost:3000/recipes`);
   }
 
   create(recipe: CreateOrUpdateRecipe) {
-    return this.http.post('http://localhost:3000/recipes', recipe);
+    return this.http.post(`http://localhost:3000/recipes`, recipe);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getById(id: string) {
-    return this.http.get<Recipe>('http://localhost:3000/recipes/${id}');
+    return this.http.get<Recipe>(`http://localhost:3000/recipes/${id}`);
   }
 
   update(id: string, recipe: CreateOrUpdateRecipe) {
-    return this.http.put('http://localhost:3000/recipes/${id}', recipe);
+    return this.http.put(`http://localhost:3000/recipes/${id}`, recipe);
+  }
+
+  delete(id: string) {
+    return this.http.delete(`http://localhost:3000/recipes/${id}`);
   }
 }

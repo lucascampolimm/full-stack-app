@@ -46,7 +46,7 @@ export class UpdateRecipeComponent implements OnInit {
     });
   }
 
-  update() {
+  updateRecipe() {
     this.recipeService.update(this.itemId, this.recipe).subscribe(() => {
       this.router.navigate(['/']);
     });
