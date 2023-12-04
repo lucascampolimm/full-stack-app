@@ -23,7 +23,9 @@ export class RecipeController {
   ): Promise<Recipe> {
     // console.log(req.user);
 
-    return this.recipeService.create(recipe, req.id);
+    const userId = req.user.id;
+
+    return this.recipeService.create(recipe, userId);
   }
 
   @Get(':id')

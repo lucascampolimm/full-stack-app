@@ -17,7 +17,8 @@ export class RecipeService {
   }
 
   async create(recipe: Recipe, user: User): Promise<Recipe> {
-    const data = Object.assign(recipe, { user: user._id });
+    // const data = Object.assign(recipe, { user: user._id });
+    const data = { ...recipe, user: user._id };
 
     const res = await this.recipeModel.create(data);
     return res;
