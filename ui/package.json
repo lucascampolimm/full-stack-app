@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "prettier --write \"src/app/**/*.{js,jsx,ts,tsx}\" \"src/main.ts\"",
-    "lint": "eslint \"src/app/**/*.{js,jsx,ts,tsx}\" \"src/main.ts\" --fix"
+    "format": "prettier --write \"src/app/**/*.ts\" \"src/main.ts\"",
+    "lint": "eslint \"src/app/**/*.ts\" \"src/main.ts\" --fix"
   },
   "private": true,
   "dependencies": {
