@@ -5,3 +5,12 @@
   align-items: center;
   height: 100vh;
 }
+
+#btnReturn {
+  color: white;
+  background-color: blue;
+}
+
+#divReturn {
+  padding: 24px;
+}

@@ -4,7 +4,6 @@ export interface Recipe {
   ingredients: string;
   preparationMethod: string;
   imageUrl: string;
-  idAuthor: number;
   createdAt: Date;
   updatedAt: Date;
   __v: number;

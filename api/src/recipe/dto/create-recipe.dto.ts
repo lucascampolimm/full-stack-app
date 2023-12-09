@@ -1,4 +1,4 @@
-import { IsEmpty, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsEmpty, IsNotEmpty, IsString } from 'class-validator';
 import { User } from '../../auth/schemas/user.schema';
 
 export class CreateRecipeDto {
@@ -17,10 +17,6 @@ export class CreateRecipeDto {
   @IsNotEmpty({ message: 'O campo imageUrl não pode estar vazio.' })
   @IsString({ message: 'O campo imageUrl está esperando uma string.' })
   readonly imageUrl: string;
-
-  @IsNotEmpty({ message: 'O campo idAuthor não pode estar vazio.' })
-  @IsNumber({}, { message: 'O campo idAuthor está esperando um number.' })
-  readonly idAuthor: number;
 
   @IsEmpty({ message: 'Você não pode passar o ID do usuário.' })
   readonly user: User;

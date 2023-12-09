@@ -1,15 +1,20 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <span>Receitas</span>
 </mat-toolbar>
 
 <div *ngFor="let item of recipes">
-  <h1>{{ item._id }}</h1>
-  <h1>{{ item.name }}</h1>
-  <h1>{{ item.ingredients }}</h1>
-  <h1>{{ item.preparationMethod }}</h1>
-  <h1>{{ item.imageUrl }}</h1>
-  <h1>{{ item.idAuthor }}</h1>
-  <h1>{{ item.createdAt }}</h1>
-  <h1>{{ item.updatedAt }}</h1>
-  <h1>{{ item.__v }}</h1>
+  <mat-card class="cardRecipe">
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ item.imageUrl }}" />
+    <mat-card-content>
+      <p>{{ item.ingredients }}</p>
+      <p>{{ item.preparationMethod }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button id="btnEdit">Editar</button>
+      <button mat-button id="btnDelete">Deletar</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

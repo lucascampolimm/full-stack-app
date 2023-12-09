@@ -18,9 +18,6 @@ export class Recipe {
   @Prop()
   imageUrl: string;
 
-  @Prop()
-  idAuthor: number;
-
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
   user: User;
 }

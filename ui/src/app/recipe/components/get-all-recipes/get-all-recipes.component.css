@@ -1,0 +1,19 @@
+.mat-toolbar {
+  color: white;
+  background-color: blue;
+}
+
+.cardRecipe {
+  max-width: 400px;
+}
+
+#btnEdit {
+  color: white;
+  background-color: blue;
+  margin-right: 5px;
+}
+
+#btnDelete {
+  color: white;
+  background-color: red;
+}

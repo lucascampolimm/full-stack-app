@@ -3,5 +3,4 @@ export interface CreateOrUpdateRecipe {
   ingredients: string;
   preparationMethod: string;
   imageUrl: string;
-  idAuthor: number;
 }

@@ -4,11 +4,14 @@ import { CreateOrUpdateRecipe } from '../../models/create-or-update-recipe.model
 import { RecipeService } from '../../services/recipe.service';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-create-recipe',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormsModule],
   templateUrl: './create-recipe.component.html',
   styleUrl: './create-recipe.component.css'
 })
@@ -22,8 +25,7 @@ export class CreateRecipeComponent implements OnInit {
     name: '',
     ingredients: '',
     preparationMethod: '',
-    imageUrl: '',
-    idAuthor: 0
+    imageUrl: ''
   };
 
   ngOnInit(): void {}

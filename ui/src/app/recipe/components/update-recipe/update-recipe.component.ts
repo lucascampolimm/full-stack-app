@@ -25,8 +25,7 @@ export class UpdateRecipeComponent implements OnInit {
     name: '',
     ingredients: '',
     preparationMethod: '',
-    imageUrl: '',
-    idAuthor: 0
+    imageUrl: ''
   };
 
   ngOnInit(): void {
@@ -42,7 +41,6 @@ export class UpdateRecipeComponent implements OnInit {
       this.recipe.ingredients = data.ingredients;
       this.recipe.preparationMethod = data.preparationMethod;
       this.recipe.imageUrl = data.imageUrl;
-      this.recipe.idAuthor = data.idAuthor;
     });
   }
 

@@ -1,0 +1,24 @@
+.formRegister {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.formField {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+#btnSave {
+  color: white;
+  background-color: blue;
+  margin-right: 5px;
+}
+
+#btnCancel {
+  color: white;
+  background-color: red;
+}
