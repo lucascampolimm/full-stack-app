@@ -1,22 +1,30 @@
-<form class="formRegister">
-  <p>
-    <mat-form-field class="formField">
-      <mat-label>Nome da Receita</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <mat-form-field class="formField">
-      <mat-label>Ingredientes</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-    <mat-form-field class="formField">
-      <mat-label>Método de Preparo</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
-    <mat-form-field class="formField">
-      <mat-label>URL da Imagem</mat-label>
-      <input matInput />
-    </mat-form-field>
-  </p>
-  <button mat-button id="btnSave">Salvar</button>
-  <button mat-button id="btnCancel">Cancelar</button>
-</form>
+<mat-toolbar>
+  <span>Criar Receita</span>
+</mat-toolbar>
+
+<div class="divCentralize">
+  <form class="formRegister">
+    <p>
+      <mat-form-field class="formField">
+        <mat-label>Nome da Receita</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field class="formField">
+        <mat-label>Ingredientes</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field class="formField">
+        <mat-label>Método de Preparo</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field class="formField">
+        <mat-label>URL da Imagem</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </p>
+    <div class="divButtons">
+      <button mat-button id="btnSave">Salvar</button>
+      <button mat-button id="btnCancel" (click)="redirectToHome()">Cancelar</button>
+    </div>
+  </form>
+</div>

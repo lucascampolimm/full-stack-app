@@ -2,6 +2,21 @@
   min-width: 150px;
   max-width: 500px;
   width: 100%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+}
+
+.mat-toolbar {
+  color: white;
+  background-color: blue;
+}
+
+.divCentralize {
+  height: calc(100% - var(--mat-toolbar-standard-height));
+  margin: auto;
+  width: 500px;
 }
 
 .formField {
@@ -12,13 +27,20 @@ td {
   padding-right: 8px;
 }
 
+.divButtons {
+  display: flex;
+  width: 160px;
+  margin: auto;
+}
+
 #btnSave {
   color: white;
   background-color: blue;
-  margin-right: 5px;
+  margin: auto;
 }
 
 #btnCancel {
   color: white;
   background-color: red;
+  margin: auto;
 }

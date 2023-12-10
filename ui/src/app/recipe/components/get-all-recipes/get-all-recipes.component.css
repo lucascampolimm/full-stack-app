@@ -4,7 +4,43 @@
 }
 
 .cardRecipe {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  overflow-y: auto;
+}
+
+.imgRecipe {
+  padding: 8px;
+}
+
+.cardContent {
+  overflow-y: auto;
+  position: relative;
+}
+
+.divLayoutCard {
+  display: flex;
+  flex-direction: column;
   max-width: 400px;
+}
+
+.divLayout {
+  max-width: 80%;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 440px;
+  margin: auto;
+  flex-direction: row;
+  display: flex;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.divCentralize {
+  height: calc(100% - var(--mat-toolbar-standard-height));
 }
 
 #btnEdit {
@@ -16,4 +52,16 @@
 #btnDelete {
   color: white;
   background-color: red;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: #f5f5f58a;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 38, 255, 0.774);
 }

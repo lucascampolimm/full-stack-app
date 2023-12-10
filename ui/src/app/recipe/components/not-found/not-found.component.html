@@ -1,9 +1,15 @@
-<div class="not-found">
-  <h1>Erro 404 - Página não encontrada</h1>
-  <p>Por favor, verifique o URL digitado ou retorne para a página inicial.</p>
-  <div id="divReturn">
-    <button mat-flat-button id="btnReturn" (click)="redirectToHome()">
-      Voltar para a página inicial
-    </button>
+<mat-toolbar>
+  <span>Not Found</span>
+</mat-toolbar>
+
+<div class="divCentralize">
+  <div class="not-found">
+    <h1>Erro 404 - Página não encontrada</h1>
+    <p>Por favor, verifique o URL digitado ou retorne para a página inicial.</p>
+    <div id="divReturn">
+      <button mat-flat-button id="btnReturn" (click)="redirectToHome()">
+        Voltar para a página inicial
+      </button>
+    </div>
   </div>
 </div>

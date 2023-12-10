@@ -1,16 +1,32 @@
 .not-found {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  text-align: center;
+}
+
+.divCentralize {
+  height: calc(100% - var(--mat-toolbar-standard-height));
+  margin: auto;
+  width: 500px;
+}
+
+.mat-toolbar {
+  color: white;
+  background-color: blue;
 }
 
 #btnReturn {
   color: white;
   background-color: blue;
+  margin: auto;
 }
 
 #divReturn {
   padding: 24px;
+  display: flex;
 }

@@ -7,11 +7,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-create-recipe',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormsModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatToolbarModule
+  ],
   templateUrl: './create-recipe.component.html',
   styleUrl: './create-recipe.component.css'
 })
@@ -34,5 +42,9 @@ export class CreateRecipeComponent implements OnInit {
     this.recipeService.create(this.recipe).subscribe(() => {
       this.router.navigate(['/']);
     });
+  }
+
+  redirectToHome() {
+    this.router.navigate(['/']);
   }
 }
