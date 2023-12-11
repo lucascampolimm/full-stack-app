@@ -1,3 +1,8 @@
-<mat-toolbar>
-  <span>Deletar Receita</span>
-</mat-toolbar>
+<div class="divDialog">
+  <h1 mat-dialog-title>Deletar Receita</h1>
+  <div mat-dialog-content>Tem certeza que deseja apagar esta receita?</div>
+  <div mat-dialog-actions class="divButtons">
+    <button mat-button cdkFocusInitial (click)="closeDialog()">Não</button>
+    <button mat-button (click)="deleteRecipe(itemId)">Sim</button>
+  </div>
+</div>

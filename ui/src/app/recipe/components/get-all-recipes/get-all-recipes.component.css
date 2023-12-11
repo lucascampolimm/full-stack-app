@@ -43,9 +43,11 @@
   height: calc(100% - var(--mat-toolbar-standard-height));
 }
 
-#btnCreate {
-  color: white;
-  background-color: blue;
+.divSpace {
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+  width: inherit;
 }
 
 #btnEdit {

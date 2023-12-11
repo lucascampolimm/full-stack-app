@@ -1,9 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { RecipeService } from './recipe.service';
 import { CreateRecipeDto } from './dto/create-recipe.dto';
 import { UpdateRecipeDto } from './dto/update-recipe.dto';
 import { Recipe } from './schemas/recipe.schema';
-import { AuthGuard } from '@nestjs/passport';
+// import { AuthGuard } from '@nestjs/passport';
 
 @Controller('recipes')
 export class RecipeController {
@@ -14,18 +14,19 @@ export class RecipeController {
     return this.recipeService.findAll();
   }
 
-  @UseGuards(AuthGuard())
+  // @UseGuards(AuthGuard())
   @Post()
   async createRecipe(
     @Body()
-    recipe: CreateRecipeDto,
-    @Req() req
+    recipe: CreateRecipeDto
+    // @Req() req
   ): Promise<Recipe> {
     // console.log(req.user);
 
-    const userId = req.user.id;
+    // const userId = req.user.id;
 
-    return this.recipeService.create(recipe, userId);
+    return this.recipeService.create(recipe);
+    // return this.recipeService.create(recipe, userId);
   }
 
   @Get(':id')

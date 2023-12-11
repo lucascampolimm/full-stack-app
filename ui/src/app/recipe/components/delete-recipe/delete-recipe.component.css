@@ -1,4 +1,9 @@
-.mat-toolbar {
-  color: white;
-  background-color: blue;
+.divDialog {
+  margin: 10px;
+}
+
+.divButtons {
+  height: calc(100% - 35px);
+  display: flex;
+  align-items: flex-end;
 }

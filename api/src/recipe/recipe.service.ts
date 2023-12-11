@@ -2,7 +2,7 @@ import { BadRequestException, Injectable, NotFoundException } from '@nestjs/comm
 import { InjectModel } from '@nestjs/mongoose';
 import { Recipe } from './schemas/recipe.schema';
 import * as mongoose from 'mongoose';
-import { User } from '../auth/schemas/user.schema';
+// import { User } from '../auth/schemas/user.schema';
 
 @Injectable()
 export class RecipeService {
@@ -16,9 +16,19 @@ export class RecipeService {
     return recipes;
   }
 
-  async create(recipe: Recipe, user: User): Promise<Recipe> {
+  /*
+  async create2(recipe: Recipe, user: User): Promise<Recipe> {
     // const data = Object.assign(recipe, { user: user._id });
     const data = { ...recipe, user: user._id };
+
+    const res = await this.recipeModel.create(data);
+    return res;
+  }
+*/
+
+  async create(recipe: Recipe): Promise<Recipe> {
+    // const data = Object.assign(recipe, { user: user._id });
+    const data = { ...recipe };
 
     const res = await this.recipeModel.create(data);
     return res;

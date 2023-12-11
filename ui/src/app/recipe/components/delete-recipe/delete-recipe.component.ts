@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 import { RecipeService } from '../../services/recipe.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialog } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-delete-recipe',
@@ -15,14 +16,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 export class DeleteRecipeComponent {
   constructor(
     private recipeService: RecipeService,
-    private router: Router
+    private dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: { itemId: string }
   ) {}
 
-  itemId: string = '';
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 
-  deleteRecipe() {
+  itemId: string = this.data + '';
+
+  deleteRecipe(id: string) {
+    this.itemId = id;
+    // console.log(this.itemId, this.data);
     this.recipeService.delete(this.itemId).subscribe(() => {
-      this.router.navigate(['/']);
+      window.location.reload();
     });
   }
 }
