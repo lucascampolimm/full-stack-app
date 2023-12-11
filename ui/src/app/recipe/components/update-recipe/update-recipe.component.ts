@@ -42,7 +42,7 @@ export class UpdateRecipeComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.itemId = params.get('id') ?? '';
-      this.getById;
+      this.getById();
     });
   }
 

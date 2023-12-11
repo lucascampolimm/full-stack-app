@@ -7,3 +7,14 @@
   display: flex;
   align-items: flex-end;
 }
+
+#btnNo {
+  color: white;
+  background-color: blue;
+  margin-right: 5px;
+}
+
+#btnYes {
+  color: white;
+  background-color: red;
+}

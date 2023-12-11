@@ -14,6 +14,13 @@
   padding: 8px;
 }
 
+#imgUser {
+  border-radius: 100%;
+  max-width: 40px;
+  margin-left: 15px;
+  box-shadow: 0 3px 5px 0 white;
+}
+
 .cardContent {
   overflow-y: auto;
   position: relative;
