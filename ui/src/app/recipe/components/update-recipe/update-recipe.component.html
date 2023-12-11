@@ -7,23 +7,27 @@
     <p>
       <mat-form-field class="formField">
         <mat-label>Nome da Receita</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="recipe.name" name="name" />
       </mat-form-field>
       <mat-form-field class="formField">
         <mat-label>Ingredientes</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)]="recipe.ingredients" name="ingredients"></textarea>
       </mat-form-field>
       <mat-form-field class="formField">
         <mat-label>Método de Preparo</mat-label>
-        <textarea matInput></textarea>
+        <textarea
+          matInput
+          [(ngModel)]="recipe.preparationMethod"
+          name="preparationMethod"
+        ></textarea>
       </mat-form-field>
       <mat-form-field class="formField">
         <mat-label>URL da Imagem</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="recipe.imageUrl" name="imageUrl" />
       </mat-form-field>
     </p>
     <div class="divButtons">
-      <button mat-button id="btnSave">Salvar</button>
+      <button mat-button id="btnSave" (click)="updateRecipe()">Salvar</button>
       <button mat-button id="btnCancel" (click)="redirectToHome()">Cancelar</button>
     </div>
   </form>

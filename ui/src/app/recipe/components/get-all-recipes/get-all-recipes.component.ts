@@ -5,6 +5,7 @@ import { Recipe } from '../../models/recipe.model';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-all-recipes',
@@ -14,7 +15,10 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './get-all-recipes.component.css'
 })
 export class GetAllRecipesComponent implements OnInit {
-  constructor(private recipeService: RecipeService) {}
+  constructor(
+    private recipeService: RecipeService,
+    private router: Router
+  ) {}
 
   recipes: Recipe[] = [];
 
@@ -26,5 +30,13 @@ export class GetAllRecipesComponent implements OnInit {
     this.recipeService.get().subscribe((data) => {
       this.recipes = data;
     });
+  }
+
+  redirectToCreateRecipe() {
+    this.router.navigate(['/create-recipe']);
+  }
+
+  updateRecipe(id: string) {
+    this.router.navigate(['/update-recipe', id]);
   }
 }

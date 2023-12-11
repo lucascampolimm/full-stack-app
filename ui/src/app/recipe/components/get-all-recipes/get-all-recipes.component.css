@@ -43,6 +43,11 @@
   height: calc(100% - var(--mat-toolbar-standard-height));
 }
 
+#btnCreate {
+  color: white;
+  background-color: blue;
+}
+
 #btnEdit {
   color: white;
   background-color: blue;

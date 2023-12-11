@@ -2,6 +2,7 @@
   <span>Receitas</span>
 </mat-toolbar>
 
+<button mat-button id="btnCreate" (click)="redirectToCreateRecipe()">Criar</button>
 <div class="divCentralize">
   <div layout="row" class="divLayout scrollbar-primary">
     <div *ngFor="let item of recipes">
@@ -16,7 +17,7 @@
             <p><b>Modo de Preparo: </b>{{ item.preparationMethod }}</p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button id="btnEdit">Editar</button>
+            <button mat-button id="btnEdit" (click)="updateRecipe(item._id)">Editar</button>
             <button mat-button id="btnDelete">Deletar</button>
           </mat-card-actions>
         </div>
@@ -24,26 +25,3 @@
     </div>
   </div>
 </div>
-
-<!--
-<mat-list>
-  <mat-list-item>
-    <div *ngFor="let item of recipes">
-      <mat-card class="cardRecipe">
-        <mat-card-header>
-          <mat-card-title>{{ item.name }}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="{{ item.imageUrl }}" />
-        <mat-card-content>
-          <p>{{ item.ingredients }}</p>
-          <p>{{ item.preparationMethod }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button id="btnEdit">Editar</button>
-          <button mat-button id="btnDelete">Deletar</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-  </mat-list-item>
-</mat-list>
--->
